@@ -3450,8 +3450,8 @@ La mesure est exprimée en mètres.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="NumeroPoint" type="xs:string" minOccurs="0" maxOccurs="1"/>
-					<xs:element name="PrecisionXY" type="xs:integer"/>
-					<xs:element name="PrecisionZ" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="PrecisionXYnum" type="xs:integer"/>
+					<xs:element name="PrecisionZnum" type="xs:integer" minOccurs="0" maxOccurs="1"/>
 					<xs:element name="Producteur" type="xs:string"/>
 					<xs:element name="TypeLeve" type="RecoStaR:LeveTypeValueType">
 						<xs:annotation>
@@ -3507,8 +3507,8 @@ La mesure est exprimée en mètres.</xs:documentation>
 						</xs:annotation>
 					</xs:element>
 					<xs:element name="NumeroPoint" type="xs:string"/>
-					<xs:element name="PrecisionXY" type="xs:integer"/>
-					<xs:element name="PrecisionZ" type="xs:integer"/>
+					<xs:element name="PrecisionXYnum" type="xs:integer"/>
+					<xs:element name="PrecisionZnum" type="xs:integer"/>
 					<xs:element name="Producteur" type="xs:string"/>
 					<xs:element name="TypeLeve" type="RecoStaR:LeveTypeValueType">
 						<xs:annotation>
@@ -3692,38 +3692,7 @@ Inspire</xs:documentation>
 	<xs:complexType name="CableElectriqueType" abstract="true">
 		<xs:complexContent>
 			<xs:extension base="RecoStaR:CablesType">
-				<xs:sequence>
-					<xs:element name="DomaineTension" type="RecoStaR:DomaineTensionValueType">
-						<xs:annotation>
-							<xs:documentation>-- Définition --&#xD;
-Domaine de tension.&#xD;
--- Source --&#xD;
-Issu de la norme NF C 18-510</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="FonctionCable" type="gml:ReferenceType">
-						<xs:annotation>
-							<xs:documentation>-- Définition --&#xD;
-Fonction du câble électrique.</xs:documentation>
-							<xs:appinfo>
-								<gmlexr:targetCodeList>FonctionCableElectriqueValue</gmlexr:targetCodeList>
-							</xs:appinfo>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="NombreConducteurs" type="xs:integer" minOccurs="0" maxOccurs="1">
-						<xs:annotation>
-							<xs:documentation>-- Définition --&#xD;
-Nombre de conducteurs constituant le câble.</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="Section" type="gml:MeasureType" minOccurs="0" maxOccurs="1">
-						<xs:annotation>
-							<xs:documentation>-- Définition --&#xD;
-Section du conducteur exprimée en mm²</xs:documentation>
-						</xs:annotation>
-					</xs:element>
-					<xs:element name="SectionNeutre" type="gml:MeasureType" minOccurs="0" maxOccurs="1"/>
-				</xs:sequence>
+				<xs:sequence/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
