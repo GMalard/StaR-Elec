@@ -1210,6 +1210,13 @@ Les nœuds ne possèdent pas de géométrie (positionnement déduit des &lt;Cont
 			<xs:extension base="star:OuvrageType">
 				<xs:sequence>
 					<xs:element name="conteneur" type="star:ConteneurPropertyType" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="noeudParent" type="star:NoeudReseauPropertyType" minOccurs="0" maxOccurs="1">
+						<xs:annotation>
+							<xs:appinfo>
+								<gml:reversePropertyName>star:noeudParent</gml:reversePropertyName>
+							</xs:appinfo>
+						</xs:annotation>
+					</xs:element>
 					<xs:element name="Geometrie" type="gml:PointPropertyType" minOccurs="0" maxOccurs="1"/>
 				</xs:sequence>
 			</xs:extension>
